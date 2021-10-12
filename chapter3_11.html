@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>オブジェクトについて</title>
+</head>
+<body>
+   <table>
+     <tr>
+       <th>Title</th>
+       <td id="title"></td>
+     </tr>
+     
+     <tr>
+       <th>Price</th>
+       <td id="price"></td>
+     </tr>
+     <tr>
+       <th>Stock</th>
+       <td id="stock"></td>
+     </tr>
+  </table>
+</body>
+  
+  <script>
+    "use strict";
+    
+    let item = {"title": "JavaScript超入門", "price": 2000, "stock": 3};
+    document.getElementById("title").textContent = item.title;
+    document.getElementById("price").textContent = item.price + "円";
+    document.getElementById("stock").textContent = item.stock + "個";
+  </script>
+</html>
