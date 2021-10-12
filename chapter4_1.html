@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="#" id="form">
+			<input type="text" name="word" />
+			<input type="submit" value="Search" />
+		</form>
+
+		<p id="output"></p>
+	</body>
+
+	<script>
+		"use strict";
+     
+    // #formの中でサブミットされたら関数が呼び出される
+		document.getElementById("form").onsubmit = function () {
+      // submitするとリダイレクトされてしまうので、それを無効化する
+			event.preventDefault();
+      
+      // #form内にあるword nameからvalueを取り出し定数search_wordに格納している
+			const search_word = document.getElementById("form").word.value;
+      
+      // 上記の定数search_wordのデータをtextContentを使って#output内に表示させている
+			document.getElementById(
+				"output"
+			).textContent = `${search_word}を検索中...`;
+		};
+	</script>
+</html>
